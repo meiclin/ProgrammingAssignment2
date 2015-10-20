@@ -1,11 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
 ## The following function work together to create a 
 ## square invertible matrix and make the inverse of the matrix
-## available in the cache environment
 
-## Write a short comment describing this function
 ## makeCacheMatrix creates and return a list of functions
+## create the matrix -> get the value of matrix -> 
+## invert the matrix and store in inv -> get the inverted matrix from inv
+## return the created functions
 
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
@@ -19,9 +18,10 @@ makeCacheMatrix <- function(x = matrix()) {
         list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
-
-## Write a short comment describing this function
 ## cacheSolve is used to get or set the inverted matrix
+## and calculates the inverse of the matrix created in makeCacheMatrix
+## return inverted matrix from inv if it existed
+## else create the matrix data and store it's inverted value
 
 cacheSolve <- function(x, ...) {
         inv <- x$getinv()
